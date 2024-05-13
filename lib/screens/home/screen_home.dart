@@ -17,6 +17,8 @@ class ScreenHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
+      backgroundColor: Colors.grey[100],
+
       appBar: AppBar(title: Text('Money Manager'),
       centerTitle: true,),
 
