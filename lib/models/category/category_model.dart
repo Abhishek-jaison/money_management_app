@@ -31,4 +31,12 @@ class Categorymodel{
     required this.type,
     this.isDeleted=false,
     });
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '{$name $type}';
+  } 
+
+
 }

@@ -9,6 +9,9 @@ abstract class CategoryDbfunctions{
 }
 
 class CategoryDb implements CategoryDbfunctions{
+  
+
+
   @override
   Future<void> insertCategory(Categorymodel value) async{
 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:money_management_app/db/category/category_db.dart';
+import 'package:money_management_app/models/category/category_model.dart';
 import 'package:money_management_app/screens/categories/screen_category.dart';
 import 'package:money_management_app/screens/home/widgets/bottom_navigation.dart';
 import 'package:money_management_app/screens/transactions/Screen_transaction.dart';
@@ -36,6 +38,13 @@ class ScreenHome extends StatelessWidget {
       }
       else{
         print('add category');
+        final _sample=Categorymodel(
+          id :DateTime.now().millisecondsSinceEpoch.toString(),
+          name: 'Travel',
+          type: CategoryType.expense,
+
+        );
+        CategoryDb().insertCategory(_sample);
       }
     },
     child: Icon(Icons.add),
